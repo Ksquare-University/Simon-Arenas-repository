@@ -1,0 +1,32 @@
+html {
+    font-size: 62.5% !important; //1rem = 10px; 10px/16px=62.5%
+}
+
+@import "variables.scss";
+@import "mixins.scss";
+
+// @font-face {
+//     font-family: "Goldplay";
+//     src: url("./font/Goldplay-Bold.woff2") format("woff2"), url("./font/Goldplay-Bold.woff") format("woff");
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Goldplay Semibold";
+//     src: url("./font/GoldplayAlt-SemiBold.woff2") format("woff2"),
+//         url("./font/GoldplayAlt-SemiBold.woff") format("woff");
+//     font-weight: 600;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: "Goldplay Black";
+//     src: url("./font/Goldplay-Black.woff2") format("woff2"), url("./font/Goldplay-Black.woff") format("woff");
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");

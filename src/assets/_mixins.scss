@@ -22,6 +22,7 @@
     background-color: $color;
     width: 110px;
     height: 8px;
+    border-radius: 2px;
 }
 @mixin paragraph($font-color) {
     font-family: "Montserrat", sans-serif;
@@ -37,19 +38,50 @@
 }
 @mixin button($bg-color, $font-color) {
     background-color: $bg-color;
-    color: $font-color;
+
     font-family: "Goldplay";
     font-weight: bold;
     font-size: 1.6rem;
     padding: 10px 19px;
     border-radius: 14px;
     transition: all 0.3s;
+    a {
+        color: $font-color;
+        text-decoration: none;
+    }
 
     &:hover {
         transform: translateY(-5px);
         -webkit-box-shadow: 10px 10px 31px -6px rgba(231, 77, 60, 0.36);
         -moz-box-shadow: 10px 10px 31px -6px rgba(231, 77, 60, 0.36);
         box-shadow: 10px 10px 31px -6px rgba(231, 77, 60, 0.281);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+@mixin border-button($bg-color, $font-color, $border) {
+    background-color: $bg-color;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 7px 5px;
+    line-height: 1.2;
+    border-radius: 14px;
+    transition: all 0.3s;
+    border: 5px solid $border;
+    width: 120px;
+    a {
+        color: $font-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        -webkit-box-shadow: 10px 10px 31px -6px rgba($pink, 0.36);
+        -moz-box-shadow: 10px 10px 31px -6px rgba($pink, 0.36);
+        box-shadow: 10px 10px 31px -6px rgba($pink, 0.281);
     }
 
     &:focus {

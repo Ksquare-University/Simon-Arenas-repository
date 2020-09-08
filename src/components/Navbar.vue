@@ -54,16 +54,19 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/_variables.scss";
 .navbar {
-  // background-color: #ecf8ff;
   font-family: "Montserrat", sans-serif;
   padding: 10px 40px;
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-
     margin: 0 auto;
+
+    @media screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
   }
 
   img {
@@ -86,6 +89,9 @@ export default {
         color: $blue_dark;
         text-decoration: none;
       }
+    }
+    @media screen and (max-width: $bp-small) {
+      margin: 20px 0;
     }
   }
 }

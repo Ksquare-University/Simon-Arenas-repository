@@ -1,17 +1,19 @@
 <template>
-  <div class="cards">
-    <div
-      v-for="card in cards"
-      :key="card.name"
-      :style="[{ color: card.color }, { background: card.colorBg }]"
-      class="card"
-    >
-      <img :src="require(`../assets/${card.img}.png`)" :alt="card.name" />
-      <div class="card__title">
-        <h1>{{ card.name }}</h1>
+  <v-container>
+    <div class="cards-mine">
+      <div
+        v-for="card in cards"
+        :key="card.name"
+        :style="[{ color: card.color }, { background: card.colorBg }]"
+        class="card-mine"
+      >
+        <img :src="require(`../assets/${card.img}.png`)" :alt="card.name" />
+        <div class="card-mine__title">
+          <h1>{{ card.name }}</h1>
+        </div>
       </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -82,7 +84,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/main.scss";
 
-.cards {
+.cards-mine {
   margin-top: 40px;
   h1 {
     @include card-title;
@@ -90,10 +92,10 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
-  column-gap: 20px;
+  column-gap: 30px;
   row-gap: 40px;
 }
-.card {
+.card-mine {
   border-radius: 15px;
   text-align: center;
   height: 200px;
@@ -114,7 +116,7 @@ export default {
     margin: 0 auto;
   }
 }
-.card:nth-of-type(9) {
+.card-mine:nth-of-type(9) {
   grid-column-end: span 2;
 }
 </style>

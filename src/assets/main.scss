@@ -7,6 +7,13 @@ html {
 @import "animations.scss";
 @import "home.scss";
 @import "projects.scss";
+.center {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (max-width: $bp-tablet) {
+        justify-content: center;
+    }
+}
 
 // @font-face {
 //     font-family: "Goldplay";

@@ -3,7 +3,7 @@
     <div class="home__banner">
       <v-container>
         <v-row align="center">
-          <v-col lg="6" sm="12">
+          <v-col md="6" xs="12">
             <div class="home__banner-text">
               <h1>Hey, my name is Simón<span>.</span></h1>
               <p>I’m a creative developer and tech lover.</p>
@@ -15,7 +15,7 @@
               </button>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col md="6" xs="12" class="center">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="home__banner-img" v-on="on" v-bind="attrs">
@@ -28,10 +28,10 @@
         </v-row>
       </v-container>
     </div>
-    <div class="home__description">
+    <div class="home__description pt-16">
       <v-container>
         <v-row align="center">
-          <v-col lg="6" sm="12">
+          <v-col md="6" xs="12">
             <div class="home__description-text">
               <h1>Hello, nice to meet you<span>.</span></h1>
               <div class="line"></div>
@@ -44,7 +44,7 @@
               <p><strong>Current location:</strong> Villahermosa, MX.</p>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col md="6" xs="12" class="center">
             <div class="home__description-img">
               <img src="../assets/img_1.png" alt="" />
             </div>
@@ -62,9 +62,11 @@
             used ones.
           </p>
         </div>
-        <Card />
       </v-container>
     </div>
+
+    <Card />
+
     <div class="home__projects">
       <v-container>
         <div class="home__projects-text">
@@ -84,8 +86,8 @@
               </button>
             </v-col>
           </v-row>
-          <v-row>
-            <v-col id="project-1" class="mx-5">
+          <div class="home__projects-cards">
+            <div id="project-1" class="mx-5">
               <div class="project-title pl-3"><h4>Conoce méxico</h4></div>
               <div class="project-img  ">
                 <img src="../assets/project-1.svg" alt="" class="hvr-sink" />
@@ -93,8 +95,9 @@
               <div class="project-demo">
                 <a href="https://conoce-mexico.netlify.app/">View demo</a>
               </div>
-            </v-col>
-            <v-col id="project-2" class="mx-5">
+            </div>
+
+            <div id="project-2" class="mx-5">
               <div class="project-title pl-3"><h4>Cryptos Exchange</h4></div>
               <div class="project-img ">
                 <img src="../assets/project-2.svg" alt="" class="hvr-sink" />
@@ -102,12 +105,12 @@
               <div class="project-demo">
                 <a href="https://cryptos-app.netlify.app/">View demo</a>
               </div>
-            </v-col>
-          </v-row>
+            </div>
+          </div>
           <v-row class="home__cta">
             <v-container>
               <v-row align="center">
-                <v-col lg="6" sm="12">
+                <v-col md="6" xs="12">
                   <div class="home__banner-text pl-5">
                     <h1>Let’s build something together</h1>
                     <button class="mt-10">
@@ -118,7 +121,7 @@
                     </button>
                   </div>
                 </v-col>
-                <v-col lg="6" sm="12" class="d-flex justify-end">
+                <v-col md="6" xs="12" class="center">
                   <div class="home__banner-img">
                     <img src="../assets/img_2.svg" alt="" />
                   </div>
@@ -165,6 +168,8 @@ export default {
 .home {
   width: 100%;
   &__banner {
+
+
     background-color: #ecf8ff;
     height: 40rem;
     display: flex;
@@ -184,10 +189,13 @@ export default {
   }
   &__description {
     background-color: #ecf8ff;
-    height: 30rem;
+    // height: 30rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: $bp-small) {
+      padding-top: 30px;
+    }
 
     h1 {
       @include sub-title($blue_dark, $blue_light);
@@ -213,9 +221,18 @@ export default {
   &__projects {
     margin-top: 30px;
 
-    height: 30rem;
+    // height: 30rem;
     display: flex;
     justify-content: space-between;
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      row-gap: 100px;
+    }
+
+    // @media screen and (max-width: $bp-large) {
+    //   flex-direction: column;
+    // }
 
     h1 {
       @include sub-title($blue_dark, $blue_light);
@@ -252,10 +269,14 @@ export default {
   border-radius: 10px;
   position: relative;
   height: 400px;
+
   img {
     position: absolute;
     bottom: -80px;
-    left: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .project-demo {
     position: absolute;
@@ -270,6 +291,7 @@ export default {
 #project-2 {
   background-color: #eafee5;
   border-radius: 10px;
+  height: 400px;
 
   position: relative;
   img {

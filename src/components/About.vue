@@ -55,7 +55,7 @@
               </p>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col lg="6" sm="12" class="d-flex justify-end center">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="about__description-img" v-on="on" v-bind="attrs">

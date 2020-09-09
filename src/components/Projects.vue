@@ -47,13 +47,13 @@
           </v-col>
           <v-col lg="6" sm="12" class="center">
             <div class="projects__description-img">
-              <img src="../assets/img_3.svg" alt="" />
+              <v-img src="../assets/img_3.svg" alt="" />
             </div>
           </v-col>
         </v-row>
         <div class="projects__card mb-10">
           <div class="card" v-for="card in cards" :key="card.nombre">
-            <img :src="require(`../assets/${card.img}.svg`)" :alt="card.name" />
+            <v-img :src="require(`../assets/${card.img}.svg`)" :alt="card.name" />
             <h3 class="mt-10">{{ card.nombre }}<span>.</span></h3>
             <h5>{{ card.texto }}</h5>
 

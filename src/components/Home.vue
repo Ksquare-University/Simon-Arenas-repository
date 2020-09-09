@@ -19,7 +19,7 @@
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="home__banner-img" v-on="on" v-bind="attrs">
-                  <img src="../assets/avatar.svg" alt="" />
+                  <v-img src="../assets/avatar.svg" alt="" />
                 </div>
               </template>
               <span>This is me</span>
@@ -46,7 +46,7 @@
           </v-col>
           <v-col md="6" xs="12" class="center">
             <div class="home__description-img">
-              <img src="../assets/img_1.png" alt="" />
+              <v-img src="../assets/img_1.png" alt="" />
             </div>
           </v-col>
         </v-row>
@@ -90,7 +90,7 @@
             <div id="project-1" class="mx-5">
               <div class="project-title pl-3"><h4>Conoce méxico</h4></div>
               <div class="project-img  ">
-                <img src="../assets/project-1.svg" alt="" class="hvr-sink" />
+                <v-img src="../assets/project-1.svg" alt="" class="hvr-sink" />
               </div>
               <div class="project-demo">
                 <a href="https://conoce-mexico.netlify.app/">View demo</a>
@@ -100,7 +100,7 @@
             <div id="project-2" class="mx-5">
               <div class="project-title pl-3"><h4>Cryptos Exchange</h4></div>
               <div class="project-img ">
-                <img src="../assets/project-2.svg" alt="" class="hvr-sink" />
+                <v-img src="../assets/project-2.svg" alt="" class="hvr-sink" />
               </div>
               <div class="project-demo">
                 <a href="https://cryptos-app.netlify.app/">View demo</a>
@@ -123,7 +123,7 @@
                 </v-col>
                 <v-col md="6" xs="12" class="center">
                   <div class="home__banner-img">
-                    <img src="../assets/img_2.svg" alt="" />
+                    <v-img src="../assets/img_2.svg" alt="" />
                   </div>
                 </v-col>
               </v-row>
@@ -134,16 +134,16 @@
             <p>simon.arenas98@gmail.com</p>
             <div class="home__contact-social">
               <a href="https://www.instagram.com/s.mon98/">
-                <img src="../assets/insta.svg" alt="" class="hvr-bob" />
+                <v-img src="../assets/insta.svg" alt="" class="hvr-bob" />
               </a>
               <a href="https://twitter.com/lsimon98">
-                <img src="../assets/twitter.svg" alt="" class="hvr-bob" />
+                <v-img src="../assets/twitter.svg" alt="" class="hvr-bob" />
               </a>
               <a href="https://www.linkedin.com/in/simon-arenas/">
-                <img src="../assets/linkedin.svg" alt="" class="hvr-bob" />
+                <v-img src="../assets/linkedin.svg" alt="" class="hvr-bob" />
               </a>
               <a href="https://github.com/SimonArenas">
-                <img src="../assets/github.svg" alt="" class="hvr-bob" />
+                <v-img src="../assets/github.svg" alt="" class="hvr-bob" />
               </a>
             </div>
           </div>
@@ -176,12 +176,10 @@ export default {
 
     h1 {
       @include title($blue_dark, $blue_light);
-     
     }
     p {
       @include paragraph($blue_dark);
       padding: 10px 0;
-   
     }
     button {
       @include button($red, white);

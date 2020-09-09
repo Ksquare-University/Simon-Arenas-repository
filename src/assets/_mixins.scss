@@ -3,13 +3,20 @@
     font-size: 3.5rem;
     line-height: 1.2;
     color: $font-color;
+    &::selection {
+        color: gold;
+    }
     span {
         font-size: 4.2rem;
         color: $point-color;
+        &::selection {
+            color: #6f1e51;
+        }
     }
 
     @media screen and (max-width: $bp-small) {
         font-size: 2.7rem;
+
         span {
             font-size: 3.8rem;
         }
@@ -20,9 +27,15 @@
     font-size: 2.6rem;
     line-height: 1.2;
     color: $font-color;
+    &::selection {
+        color: gold;
+    }
     span {
         font-size: 3.5rem;
         color: $point-color;
+        &::selection {
+            color: #6f1e51;
+        }
     }
     @media screen and (max-width: $bp-small) {
         font-size: 2.2rem;
@@ -40,6 +53,9 @@
     font-size: 1.5rem;
     line-height: 1.2;
     color: $font-color;
+    &::selection {
+        color: gold;
+    }
     @media screen and (max-width: $bp-small) {
         font-size: 1.2rem;
     }
@@ -49,6 +65,9 @@
     font-size: 1.3rem;
     line-height: 1.2;
     color: $font-color;
+    &::selection {
+        color: gold;
+    }
     @media screen and (max-width: $bp-small) {
         font-size: 1.2rem;
     }

@@ -22,7 +22,7 @@
               </p>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col lg="6" sm="12" class="center">
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="about__banner-img" v-on="on" v-bind="attrs">
@@ -179,6 +179,9 @@ export default {};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: $bp-small) {
+      height: auto;
+    }
 
     h1 {
       @include title($green, $blue_light);
@@ -192,6 +195,9 @@ export default {};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: $bp-small) {
+      padding-top: 30px;
+    }
 
     h1 {
       @include sub-title($green, $blue_light);

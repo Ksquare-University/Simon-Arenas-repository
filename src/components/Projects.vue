@@ -18,7 +18,7 @@
               </p>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col lg="6" sm="12" class="center">
             <div class="projects__banner-img">
               <v-img src="../assets/Person.svg" alt="" />
             </div>
@@ -45,7 +45,7 @@
               </p>
             </div>
           </v-col>
-          <v-col lg="6" sm="12" class="d-flex justify-end">
+          <v-col lg="6" sm="12" class="center">
             <div class="projects__description-img">
               <img src="../assets/img_3.svg" alt="" />
             </div>
@@ -57,10 +57,23 @@
             <h3 class="mt-10">{{ card.nombre }}<span>.</span></h3>
             <h5>{{ card.texto }}</h5>
 
-            <button class="mt-5"><a :href="card.url">Visit page</a></button>
+            <button class="mt-5">
+              <a :href="card.url" target="_blank">Visit page</a>
+            </button>
           </div>
         </div>
       </v-container>
+    </div>
+    <div class="github-button">
+      <v-btn
+        class="ma-2 mb-10"
+        color="grey darken-4"
+        dark
+        href="https://github.com/SimonArenas"
+        target="_blank"
+      >
+        <v-icon dark left>mdi-github</v-icon>Visit my repository
+      </v-btn>
     </div>
     <div class="projects__contact">
       <v-container>
@@ -130,6 +143,13 @@ export default {
             "This was my first VueJS project, it is a cryptos exchange app, connected to and API.",
           url: "https://conoce-mexico.netlify.app/",
         },
+        {
+          img: "icon-5",
+          nombre: "Surprende App",
+          texto:
+            "This was my first mobile app, I did it while I was at college and from scratch on my own (design and development). I used Ionic 3 as a framework.",
+          url: "https://apps.apple.com/mx/app/surprende/id1463082027",
+        },
       ],
     };
   },
@@ -157,6 +177,7 @@ export default {
     button {
       @include button($red, white);
     }
+   
   }
   &__description {
     display: flex;
@@ -190,7 +211,7 @@ export default {
       font-size: 1.5rem;
 
       span {
-        font-size: 50px;
+        font-size: 40px;
         color: $pink;
       }
     }
@@ -214,6 +235,11 @@ export default {
       @include button($pink, white);
     }
   }
+}
+.github-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .line {
   @include line($pink);

@@ -73,14 +73,14 @@
           <h1>Projects<span>.</span></h1>
           <div class="line"></div>
           <v-row>
-            <v-col>
+            <v-col md="6" xs="12">
               <p>
                 I know you want to see more.
               </p>
               <p>👉🏻 Visit my project page.</p>
             </v-col>
-            <v-spacer></v-spacer>
-            <v-col class="d-flex justify-end align-center">
+            <!-- <v-spacer></v-spacer> -->
+            <v-col md="6" xs="12" class="d-flex justify-end align-center">
               <button>
                 <router-link to="/projects">More projects 👀</router-link>
               </button>
@@ -168,8 +168,6 @@ export default {
 .home {
   width: 100%;
   &__banner {
-
-
     background-color: #ecf8ff;
     height: 40rem;
     display: flex;
@@ -277,6 +275,9 @@ export default {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (max-width: $bp-small) {
+      width: 400px;
+    }
   }
   .project-demo {
     position: absolute;

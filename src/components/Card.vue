@@ -1,19 +1,17 @@
 <template>
-  <v-container>
-    <div class="cards-mine">
-      <div
-        v-for="card in cards"
-        :key="card.name"
-        :style="[{ color: card.color }, { background: card.colorBg }]"
-        class="card-mine"
-      >
-        <img :src="require(`../assets/${card.img}.png`)" :alt="card.name" />
-        <div class="card-mine__title">
-          <h1>{{ card.name }}</h1>
-        </div>
+  <div class="cards-mine">
+    <div
+      v-for="card in cards"
+      :key="card.name"
+      :style="[{ color: card.color }, { background: card.colorBg }]"
+      class="card-mine"
+    >
+      <img :src="require(`../assets/${card.img}.png`)" :alt="card.name" />
+      <div class="card-mine__title">
+        <h1>{{ card.name }}</h1>
       </div>
     </div>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -86,6 +84,8 @@ export default {
 
 .cards-mine {
   margin-top: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
   h1 {
     @include card-title;
   }

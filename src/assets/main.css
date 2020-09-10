@@ -3,6 +3,19 @@ html {
   font-size: 62.5% !important;
 }
 
+@font-face {
+  font-family: "Goldplay";
+  src: url("~@/assets/font/Goldplay.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Goldplay Bold";
+  src: url("~@/assets/font/Goldplay-Bold.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+}
 /* Bob */
 @keyframes hvr-bob {
   0% {
@@ -83,7 +96,7 @@ html {
 
 .center {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 @media screen and (max-width: 960px) {
   .center {

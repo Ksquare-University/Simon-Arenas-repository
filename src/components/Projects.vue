@@ -127,21 +127,21 @@ export default {
           nombre: "Lux travel",
           texto:
             "Did I mention that I like to travel? Lux travel is a landing page to book a lux place to stay.",
-          url: "https://conoce-mexico.netlify.app/",
+          url: "https://simonarenas.github.io/lux-travel/",
         },
         {
           img: "icon-3",
           nombre: "Hogar dulce hogar",
           texto:
             "I believe that buy a house shouldn’t be that hard. Nobody likes all the boring paper work. Why not just order it online?",
-          url: "https://conoce-mexico.netlify.app/",
+          url: "https://simonarenas.github.io/Hogal-dulce-hogar/",
         },
         {
           img: "icon-4",
           nombre: "Cryptos Exchange",
           texto:
             "This was my first VueJS project, it is a cryptos exchange app, connected to and API.",
-          url: "https://conoce-mexico.netlify.app/",
+          url: "https://cryptos-app.netlify.app/",
         },
         {
           img: "icon-5",
@@ -177,7 +177,6 @@ export default {
     button {
       @include button($red, white);
     }
-   
   }
   &__description {
     display: flex;

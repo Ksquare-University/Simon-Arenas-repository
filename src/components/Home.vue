@@ -93,7 +93,9 @@
                 <img src="../assets/project-1.png" alt="" class="hvr-sink" />
               </div>
               <div class="project-demo">
-                <a href="https://conoce-mexico.netlify.app/">View demo</a>
+                <a href="https://conoce-mexico.netlify.app/" target="_blank"
+                  >View demo</a
+                >
               </div>
             </div>
 
@@ -103,7 +105,9 @@
                 <img src="../assets/project-2.png" alt="" class="hvr-sink" />
               </div>
               <div class="project-demo">
-                <a href="https://cryptos-app.netlify.app/">View demo</a>
+                <a href="https://cryptos-app.netlify.app/" target="_blank"
+                  >View demo</a
+                >
               </div>
             </div>
           </div>
@@ -133,16 +137,19 @@
             <h1>Stay tuned</h1>
             <p>simon.arenas98@gmail.com</p>
             <div class="home__contact-social">
-              <a href="https://www.instagram.com/s.mon98/">
+              <a href="https://www.instagram.com/s.mon98/" target="_blank">
                 <img src="../assets/insta.svg" alt="" class="hvr-bob" />
               </a>
-              <a href="https://twitter.com/lsimon98">
+              <a href="https://twitter.com/lsimon98" target="_blank">
                 <img src="../assets/twitter.svg" alt="" class="hvr-bob" />
               </a>
-              <a href="https://www.linkedin.com/in/simon-arenas/">
+              <a
+                href="https://www.linkedin.com/in/simon-arenas/"
+                target="_blank"
+              >
                 <img src="../assets/linkedin.svg" alt="" class="hvr-bob" />
               </a>
-              <a href="https://github.com/SimonArenas">
+              <a href="https://github.com/SimonArenas" target="_blank">
                 <img src="../assets/github.svg" alt="" class="hvr-bob" />
               </a>
             </div>

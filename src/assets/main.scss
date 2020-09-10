@@ -9,7 +9,7 @@ html {
 @import "projects.scss";
 .center {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     @media screen and (max-width: $bp-tablet) {
         justify-content: center;
     }

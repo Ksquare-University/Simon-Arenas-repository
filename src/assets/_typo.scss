@@ -1,13 +1,16 @@
 @font-face {
     font-family: "Goldplay";
-    src: url("~@/assets/font/Goldplay.otf") format("otf");
+    src: url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.otf") format("otf"),
+        url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.woff") format("woff"),
+        url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.woff2") format("woff2");
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Goldplay Bold";
-    src: url("~@/assets/font/Goldplay-Bold.otf") format("otf");
+    src: url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.otf") format("otf"),
+        url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.woff") format("woff"),
+        url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.woff2") format("woff2");
     font-style: normal;
     font-display: swap;
-    font-weight: bold;
 }

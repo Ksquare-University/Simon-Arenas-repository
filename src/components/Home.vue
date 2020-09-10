@@ -176,12 +176,10 @@ export default {
 
     h1 {
       @include title($blue_dark, $blue_light);
-     
     }
     p {
       @include paragraph($blue_dark);
       padding: 10px 0;
-   
     }
     button {
       @include button($red, white);
@@ -286,6 +284,8 @@ export default {
     bottom: -30px;
     right: 0;
     a {
+      font-family: "Goldplay";
+
       color: #f05859;
       text-decoration: none;
     }
@@ -311,6 +311,8 @@ export default {
     bottom: -30px;
     right: 0;
     a {
+      font-family: "Goldplay";
+
       color: #41a46a;
       text-decoration: none;
     }

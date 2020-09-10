@@ -1,20 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
-html {
-  font-size: 62.5% !important;
-}
-
+@import url("https://cdn-scorpius.elifebackup.com/css/fonts/font.css");
 @font-face {
   font-family: "Goldplay";
-  src: url("~@/assets/font/Goldplay.otf") format("otf");
+  src: url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.otf") format("otf"), url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.woff") format("woff"), url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Goldplay Bold";
-  src: url("~@/assets/font/Goldplay-Bold.otf") format("otf");
+  src: url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.otf") format("otf"), url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.woff") format("woff"), url("https://cdn-scorpius.elifebackup.com/css/fonts/Goldplay-Bold.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
-  font-weight: bold;
 }
 /* Bob */
 @keyframes hvr-bob {
@@ -68,7 +64,7 @@ html {
 }
 
 #project-1 {
-  font-family: "Goldplay";
+  font-family: "Goldplay Bold";
 }
 #project-1 h4 {
   font-weight: bold;
@@ -77,7 +73,7 @@ html {
 }
 
 #project-2 {
-  font-family: "Goldplay";
+  font-family: "Goldplay Bold";
 }
 #project-2 h4 {
   font-weight: bold;
@@ -86,7 +82,7 @@ html {
 }
 
 .projects__card h3 {
-  font-family: "Goldplay";
+  font-family: "Goldplay Bold";
 }
 .projects__card h5 {
   font-family: "Montserrat", sans-serif;

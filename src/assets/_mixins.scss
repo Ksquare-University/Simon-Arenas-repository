@@ -1,5 +1,5 @@
 @mixin title($font-color, $point-color) {
-    font-family: "Goldplay";
+    font-family: "Goldplay Bold";
     font-size: 3.5rem;
     line-height: 1.2;
     color: $font-color;
@@ -23,7 +23,7 @@
     }
 }
 @mixin sub-title($font-color, $point-color) {
-    font-family: "Goldplay";
+    font-family: "Goldplay Bold";
     font-size: 2.6rem;
     line-height: 1.2;
     color: $font-color;
@@ -75,7 +75,7 @@
 @mixin button($bg-color, $font-color) {
     background-color: $bg-color;
 
-    font-family: "Goldplay";
+    font-family: "Goldplay Bold";
     font-weight: bold;
     font-size: 1.6rem;
     padding: 10px 19px;
@@ -126,30 +126,6 @@
 }
 
 @mixin card-title {
-    font-family: "Goldplay";
+    font-family: "Goldplay Bold";
     font-size: 1.5rem;
 }
-// @font-face {
-//     font-family: "Goldplay";
-//     src: url("./font/Goldplay-Bold.woff2") format("woff2"), url("./font/Goldplay-Bold.woff") format("woff");
-//     font-weight: bold;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: "Goldplay Semibold";
-//     src: url("./font/GoldplayAlt-SemiBold.woff2") format("woff2"),
-//         url("./font/GoldplayAlt-SemiBold.woff") format("woff");
-//     font-weight: 600;
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: "Goldplay Black";
-//     src: url("./font/Goldplay-Black.woff2") format("woff2"), url("./font/Goldplay-Black.woff") format("woff");
-//     font-weight: 900;
-//     font-style: normal;
-//     font-display: swap;
-// }

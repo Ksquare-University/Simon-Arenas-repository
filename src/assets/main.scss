@@ -10,6 +10,9 @@ html {
 .center {
     display: flex;
     justify-content: flex-end;
+    @media screen and (max-width: $bp-largest) {
+        justify-content: center;
+    }
     @media screen and (max-width: $bp-tablet) {
         justify-content: center;
     }

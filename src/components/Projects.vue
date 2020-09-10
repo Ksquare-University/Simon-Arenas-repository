@@ -63,10 +63,8 @@
 
             <v-tooltip bottom v-if="card.video">
               <template v-slot:activator="{ on, attrs }">
-                <button class="mt-5">
-                  <a :href="card.url" v-on="on" v-bind="attrs" target="_blank"
-                    >Visit page</a
-                  >
+                <button class="mt-5" v-on="on" v-bind="attrs">
+                  <a :href="card.url" target="_blank">Visit page</a>
                 </button>
               </template>
               <span

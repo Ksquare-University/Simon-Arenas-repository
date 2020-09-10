@@ -131,6 +131,7 @@
         </v-row>
       </v-container>
     </div>
+    <!-- Galería de fotos -->
     <v-row class="pb-10">
       <v-col cols="12" sm="6" offset-sm="3">
         <v-card>
@@ -162,11 +163,69 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <div class="about__description pb-10">
+      <v-container>
+        <v-row align="center" class="mt-5">
+          <v-row align="center" class="mt-5">
+            <v-col>
+              <div class="about__description-text">
+                <h1>Video production<span>.</span></h1>
+                <div class="line"></div>
+                <p>
+                  While I was at college, I founded a video production startup.
+                  Video production is something I really enjoy, it is one of my
+                  side hustles.
+                </p>
+              </div>
+            </v-col>
+          </v-row>
+          <v-carousel
+            height="400"
+            hide-delimiter-background
+            show-arrows-on-hover
+            hide-delimiters
+          >
+            <v-carousel-item v-for="(slide, i) in slides" :key="i">
+              <v-sheet color="grey lighten-5" height="100%">
+                <v-row class="fill-height" align="center" justify="center">
+                  <div class="display-3">
+                    <iframe
+                      :src="`https://player.vimeo.com/video/${slide}`"
+                      width="100%"
+                      height="100%"
+                      frameborder="0"
+                      allow="autoplay; fullscreen"
+                      allowfullscreen
+                      style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
+                    ></iframe>
+                  </div>
+                </v-row>
+              </v-sheet>
+            </v-carousel-item>
+          </v-carousel>
+        </v-row>
+      </v-container>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      colors: ["grey lighten-5"],
+      slides: [
+        "456600346",
+        "456600635",
+        "456604535",
+        "456603853",
+        "456603097",
+        "456602212",
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

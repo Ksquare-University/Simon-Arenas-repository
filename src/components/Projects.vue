@@ -57,9 +57,23 @@
             <h3 class="mt-10">{{ card.nombre }}<span>.</span></h3>
             <h5>{{ card.texto }}</h5>
 
-            <button class="mt-5">
+            <button class="mt-5" v-if="!card.video">
               <a :href="card.url" target="_blank">Visit page</a>
             </button>
+
+            <v-tooltip bottom v-if="card.video">
+              <template v-slot:activator="{ on, attrs }">
+                <button class="mt-5">
+                  <a :href="card.url" v-on="on" v-bind="attrs" target="_blank"
+                    >Visit page</a
+                  >
+                </button>
+              </template>
+              <span
+                >I also created a promotional video for it. Go to 'About' page
+                if you want to check it out 😀</span
+              >
+            </v-tooltip>
           </div>
         </div>
       </v-container>
@@ -147,8 +161,9 @@ export default {
           img: "icon-5",
           nombre: "Surprende App",
           texto:
-            "This was my first mobile app, I did it while I was at college and from scratch on my own (design and development). I used Ionic 3 as a framework.",
+            "This was my first mobile app, I did it while I was at college and from scratch on my own (design and development). I used Ionic 3 as a framework and it is available in the Play Store and App Store.",
           url: "https://apps.apple.com/mx/app/surprende/id1463082027",
+          video: true,
         },
       ],
     };

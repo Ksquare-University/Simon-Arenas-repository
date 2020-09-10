@@ -269,7 +269,9 @@ export default {
   border-radius: 10px;
   position: relative;
   height: 400px;
-
+  @media screen and (max-width: $bp-small) {
+    width: 390px;
+  }
   img {
     position: absolute;
     bottom: -80px;
@@ -299,6 +301,9 @@ export default {
   height: 400px;
 
   position: relative;
+  @media screen and (max-width: $bp-small) {
+    width: 390px;
+  }
   img {
     width: auto; /* width of container */
     height: 80%; /* height of container */

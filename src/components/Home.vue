@@ -156,6 +156,8 @@
 <script>
 import Card from "./Card.vue";
 export default {
+  title: "Simón Arenas - web developer",
+
   components: {
     Card,
   },

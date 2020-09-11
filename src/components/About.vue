@@ -239,7 +239,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: $bp-small) {
-      height: auto;
+      height: 100%;
     }
 
     h1 {

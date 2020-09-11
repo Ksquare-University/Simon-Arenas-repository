@@ -193,6 +193,14 @@ export default {
     button {
       @include button($red, white);
     }
+    &-img {
+      @media screen and (max-width: $bp-small) {
+        width: 200px;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
   &__description {
     background-color: #ecf8ff;

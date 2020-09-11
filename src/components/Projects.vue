@@ -210,6 +210,9 @@ export default {
     column-gap: 60px;
     row-gap: 30px;
     grid-template-rows: 2;
+    @media screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
     img {
       margin: 0 auto;
       height: 200px;

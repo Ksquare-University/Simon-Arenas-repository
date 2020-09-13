@@ -163,6 +163,13 @@ export default {
           url: "https://apps.apple.com/mx/app/surprende/id1463082027",
           video: true,
         },
+        {
+          img: "icon-6",
+          nombre: "Hospital Air App",
+          texto:
+            "I believe that we as programmers have the responsibility to help people, I put my bit building an app for a hospital that had a lot of patients because of Covid-19, so I created for them an app where people could communicate directly with doctors and see their description, photo, schedule, rating and more.",
+          url: "https://github.com/SimonArenas/hospital-air-app",
+        },
       ],
     };
   },
@@ -208,7 +215,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     column-gap: 60px;
-    row-gap: 30px;
+    row-gap: 60px;
     grid-template-rows: 2;
     @media screen and (max-width: $bp-small) {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

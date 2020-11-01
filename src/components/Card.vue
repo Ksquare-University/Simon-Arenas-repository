@@ -1,5 +1,5 @@
 <template>
-  <div class="cards-mine">
+  <section class="cards-mine">
     <div
       v-for="card in cards"
       :key="card.name"
@@ -11,7 +11,7 @@
         <h1>{{ card.name }}</h1>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -90,7 +90,7 @@ export default {
     @include card-title;
   }
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   justify-content: center;
   column-gap: 30px;
   row-gap: 40px;
@@ -115,8 +115,5 @@ export default {
     height: 70px;
     margin: 0 auto;
   }
-}
-.card-mine:nth-of-type(9) {
-  grid-column-end: span 2;
 }
 </style>

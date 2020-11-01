@@ -1,6 +1,6 @@
 <template>
-  <div class="projects">
-    <div class="projects__banner">
+  <section class="projects">
+    <section class="projects__banner">
       <v-container>
         <v-row align="center">
           <v-col lg="6" sm="12">
@@ -25,8 +25,8 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-    <div class="projects__description">
+    </section>
+    <section class="projects__description">
       <v-container>
         <v-row align="center">
           <v-col lg="6" sm="12">
@@ -75,7 +75,7 @@
           </div>
         </div>
       </v-container>
-    </div>
+    </section>
     <div class="github-button">
       <v-btn
         class="ma-2 mb-10"
@@ -87,7 +87,7 @@
         <v-icon dark left>mdi-github</v-icon>Visit my repository
       </v-btn>
     </div>
-    <div class="projects__contact">
+    <section class="projects__contact">
       <v-container>
         <v-row align="center" class="mt-5">
           <v-col lg="6" sm="12">
@@ -118,8 +118,8 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
 
 <script>

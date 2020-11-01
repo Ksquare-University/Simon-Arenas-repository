@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <section class="home">
     <div class="home__banner">
       <v-container>
         <v-row align="center">
@@ -19,7 +19,7 @@
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="home__banner-img" v-on="on" v-bind="attrs">
-                  <img src="../assets/avatar.svg" alt="" />
+                  <img src="../assets/me.png" alt="" />
                 </div>
               </template>
               <span>This is me</span>
@@ -28,7 +28,7 @@
         </v-row>
       </v-container>
     </div>
-    <div class="home__description pt-16">
+    <section class="home__description pt-16">
       <v-container>
         <v-row align="center">
           <v-col md="6" xs="12">
@@ -51,10 +51,10 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-    <div class="home__technologies">
+    </section>
+    <section class="home__technologies">
       <v-container>
-        <div class="home__technologies-text">
+        <div class="home__technologies-text" id="main-technologies">
           <h1>Main Technologies<span>.</span></h1>
           <div class="line"></div>
           <p>
@@ -63,11 +63,11 @@
           </p>
         </div>
       </v-container>
-    </div>
+    </section>
 
     <Card />
 
-    <div class="home__projects">
+    <section class="home__projects">
       <v-container>
         <div class="home__projects-text">
           <h1>Projects<span>.</span></h1>
@@ -77,7 +77,10 @@
               <p>
                 I know you want to see more.
               </p>
-              <p>👉🏻 Visit my project page.</p>
+
+              <router-link class="home__projects-link" to="/projects"
+                ><p>👉🏻 Visit my project page.</p></router-link
+              >
             </v-col>
             <!-- <v-spacer></v-spacer> -->
             <v-col md="6" xs="12" class="d-flex justify-end align-center">
@@ -87,29 +90,38 @@
             </v-col>
           </v-row>
           <div class="home__projects-cards">
-            <div id="project-1" class="mx-5">
-              <div class="project-title pl-3"><h4>Conoce méxico</h4></div>
-              <div class="project-img  ">
-                <img src="../assets/project-1.png" alt="" class="hvr-sink" />
+            <a
+              href="https://conoce-mexico.netlify.app/"
+              class="home__projects-link"
+            >
+              <div id="project-1" class="mx-5">
+                <div class="project-title pl-3"><h4>Conoce México</h4></div>
+                <div class="project-img  ">
+                  <img src="../assets/project-1.png" alt="" class="hvr-sink" />
+                </div>
+                <div class="project-demo">
+                  <a href="https://conoce-mexico.netlify.app/" target="_blank"
+                    >View demo</a
+                  >
+                </div>
               </div>
-              <div class="project-demo">
-                <a href="https://conoce-mexico.netlify.app/" target="_blank"
-                  >View demo</a
-                >
+            </a>
+            <a
+              href="https://cryptos-app.netlify.app/"
+              class="home__projects-link"
+            >
+              <div id="project-2" class="mx-5">
+                <div class="project-title pl-3"><h4>Cryptos Exchange</h4></div>
+                <div class="project-img ">
+                  <img src="../assets/project-2.png" alt="" class="hvr-sink" />
+                </div>
+                <div class="project-demo">
+                  <a href="https://cryptos-app.netlify.app/" target="_blank"
+                    >View demo</a
+                  >
+                </div>
               </div>
-            </div>
-
-            <div id="project-2" class="mx-5">
-              <div class="project-title pl-3"><h4>Cryptos Exchange</h4></div>
-              <div class="project-img ">
-                <img src="../assets/project-2.png" alt="" class="hvr-sink" />
-              </div>
-              <div class="project-demo">
-                <a href="https://cryptos-app.netlify.app/" target="_blank"
-                  >View demo</a
-                >
-              </div>
-            </div>
+            </a>
           </div>
           <v-row class="home__cta">
             <v-container>
@@ -156,8 +168,8 @@
           </div>
         </div>
       </v-container>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
 
 <script>
@@ -167,6 +179,14 @@ export default {
 
   components: {
     Card,
+  },
+
+  mounted() {
+    var aqui = this.$router.currentRoute.hash.replace("#", "");
+    if (aqui)
+      this.$nextTick(() =>
+        window.document.getElementById(aqui).scrollIntoView()
+      );
   },
 };
 </script>
@@ -241,13 +261,16 @@ export default {
     justify-content: space-between;
     &-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       row-gap: 100px;
     }
 
     // @media screen and (max-width: $bp-large) {
     //   flex-direction: column;
     // }
+    &-link {
+      text-decoration: none;
+    }
 
     h1 {
       @include sub-title($blue_dark, $blue_light);
@@ -258,6 +281,7 @@ export default {
     }
     button {
       @include button($red, white);
+      font-size: 20px;
     }
   }
   &__cta {

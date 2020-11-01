@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <div class="about__banner">
+  <section class="about">
+    <section class="about__banner">
       <v-container>
         <v-row align="center">
           <v-col lg="6" sm="12">
@@ -26,7 +26,7 @@
             <v-tooltip bottom>
               <template v-slot:activator="{ on, attrs }">
                 <div class="about__banner-img" v-on="on" v-bind="attrs">
-                  <v-img src="../assets/me.png" alt="" />
+                  <v-img src="../assets/avatar.svg" alt="" />
                 </div>
               </template>
               <span>This is me again</span>
@@ -34,8 +34,8 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-    <div class="about__description">
+    </section>
+    <section class="about__description">
       <v-container>
         <v-row align="center" class="mt-5">
           <v-col lg="6" sm="12">
@@ -81,7 +81,7 @@
           </v-row>
         </v-row>
       </v-container>
-    </div>
+    </section>
     <v-row>
       <v-col cols="12" sm="6" offset-sm="3">
         <v-card>
@@ -113,7 +113,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <div class="about__description">
+    <section class="about__description">
       <v-container>
         <v-row align="center" class="mt-5">
           <v-row align="center" class="mt-5">
@@ -130,7 +130,7 @@
           </v-row>
         </v-row>
       </v-container>
-    </div>
+    </section>
     <!-- Galería de fotos -->
     <v-row class="pb-10">
       <v-col cols="12" sm="6" offset-sm="3">
@@ -164,7 +164,7 @@
       </v-col>
     </v-row>
 
-    <div class="about__description pb-10">
+    <section class="about__description pb-10">
       <v-container>
         <v-row align="center" class="mt-5">
           <v-row align="center" class="mt-5">
@@ -206,8 +206,8 @@
           </v-carousel>
         </v-row>
       </v-container>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>
 
 <script>
